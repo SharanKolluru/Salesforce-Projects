@@ -4,12 +4,12 @@ public class WES_ScheduleCovidCallouts implements Schedulable{
         //Call Covid-19 API
         WES_CovidCallouts.makeCountriesCallout();
     }
-
 }
 
-/*
 APEX Script To Schedule Class For Every 5 Miniutes
----------------------------------------------------
+----------------------------------------------------
+/*...START OF APEX SCRIPT...*/
+
 String sch1 = '0 0 * * * ?';
 WES_ScheduleCovidCallouts sqrb1 = new WES_ScheduleCovidCallouts();
 system.schedule('Every Hour plus 0 min', sch1, sqrb1); 
@@ -47,4 +47,4 @@ String sch12 = '0 55 * * * ?';
 WES_ScheduleCovidCallouts sqrb12 = new WES_ScheduleCovidCallouts();
 system.schedule('Every Hour plus 55 min', sch12, sqrb12);
 
-*/
+/*...END OF APEX SCRIPT...*/
